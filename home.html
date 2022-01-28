@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Styles  -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header-style.css">
+    <link rel="stylesheet" href="assets/css/home-style.css">
+
+</head>
+<body onload="showTodos()">
+    <div class="container">
+        <header>
+            <nav>
+                <h2>Task Management > Home</h2>
+            </nav>
+        </header>
+        <main>
+            <form action="">
+                <div class="form-group">
+                    <input required spellcheck="false" type="text" class="title" id="title">
+                    <label for="title">Title</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="description" required spellcheck="false" placeholder="Description" class="description-add"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="add" id="add" onclick="addItem(event)"><span>+</span>Add</button>
+                </div>
+            </form>
+        </main>
+        <div class="tasks">
+            <div class="top">
+                <p>Tasks</p>
+            </div>
+            <div class="after-top">
+                <div class="tasks-card">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

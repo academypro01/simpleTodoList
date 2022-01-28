@@ -1,0 +1,167 @@
+/* CSS Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Colors  */
+:root {
+    --deep-blue  :  rgb(23, 117, 185);
+    --light-blue :   rgb(162, 206, 237);
+    --silver     :   rgb(233, 234, 235);
+    --gray       : rgb(212, 213, 213);
+    --black      : rgb(4, 7, 7);
+    --deep-gray  : rgb(135, 136, 136)
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main {
+    padding: 1em 4em;
+}
+/* form styles - Start  */
+form {
+    margin-top: 0.5em;
+}
+
+form input, form textarea, form select {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background-color: var(--silver);
+    color: var(--black);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* form Styles - End  */
+
+.form-group {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+/* title Styles - Start  */
+.title {
+    border-bottom: 1px solid var(--deep-blue);
+}
+
+.title ~ label {
+    position: absolute;
+    top: 1.5em;
+    left: 0.5em;
+    color: var(--deep-gray);
+    transition: font-size 0.36s ease-in-out, top 0.36s ease-in-out;
+}
+
+.title:focus ~ label, .title:valid ~ label {
+    font-size: 0.8em;
+    top: 0.2em;
+}
+/* title Styles - End  */
+
+.description {
+    border-bottom: 1px solid var(--deep-gray);
+    resize: none;
+    height: 40vh !important;
+}
+
+/* select Styles - Start  */
+.status {
+    border-bottom: 1px solid var(--deep-blue);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='50' viewBox='0 0 24 24' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 5px;
+}
+.status:focus {
+    background-image: none;
+}
+.status option {
+    background-color: var(--silver);
+    border: none;
+}
+.status option:hover {
+    background-color: var(--deep-gray) !important;
+}
+/* select Styles - End  */
+
+.svg {
+    width : 2em;
+    margin-right: 0.6em;
+    vertical-align: middle;
+}
+
+/* Button Styles - Start  */
+button {
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    vertical-align: middle !important;
+    padding: 1.2em 0;
+    border-radius: 10px;
+    max-height: 4em;
+    transition: box-shadow 0.36s ease-in-out;
+}
+
+div.form-group.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+button.edit {
+    background-color: var(--deep-blue);
+    color: #fff;
+    flex: 100%;
+}
+
+button.cancle {
+    background-color: transparent;
+    color: var(--deep-gray);
+    border: 1px solid var(--deep-gray);
+    flex: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+/* Button Styles - End  */
+
+
+
+/* Media Query : 700px */
+@media only screen and (max-width: 700px) {
+    main {
+        padding: 1em 2em;
+    }
+}
+
+/* Media Query : 350px */
+@media only screen and (max-width: 350px) {
+    main {
+        padding: 1em 1em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}

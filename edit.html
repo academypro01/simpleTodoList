@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Page</title>
+
+    <!-- Styles  -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header-style.css">
+    
+</head>
+<body onload="editTodo()">
+    <div class="container">
+        <header>
+            <nav>
+                <h2>Task Management > Edit</h2>
+            </nav>
+        </header>
+        <main>
+            <h2>Edit Task</h2>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" name="" id="title" class="title" spellcheck="false" required>
+                    <label for="title">Title</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="" required spellcheck="false" id="description" class="description" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <select name="" id="status" class="status">
+                    </select>
+                </div>
+                <input type="hidden" name="id">
+                <div class="form-group buttons">
+                    <button onclick="updateTodo(event)" class="edit" id="edit"><img class="svg" id="svg" src="./assets/images/editor.svg" alt="svg editor"> Edit</button>
+                    <button id="cancle" onclick="cancleButton(event)" class="cancle">Cancle</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- scripts -->
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
